@@ -7,7 +7,7 @@
     particles = [],
     properties = {
         bgColor             : 'rgba(17, 17, 19, 1)',
-        particleColor       : 'rgba(77, 77, 77, 1)',
+        particleColor       : 'rgba(77, 77, 77, 0.42)',
         particleRadius      : 3,
         particleCount       : 60,
         particleMaxVelocity : 0.5,
@@ -71,8 +71,8 @@
                 length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
                 if(length < properties.lineLength){
                     opacity = 1-length/properties.lineLength;
-                    ctx.lineWidth = '0.5';
-                    ctx.strokeStyle = 'rgba(77, 77, 77, 1)';
+                    ctx.lineWidth = '0.25';
+                    ctx.strokeStyle = 'rgba(77, 77, 77, 0.42)';
                     ctx.beginPath();
                     ctx.moveTo(x1, y1);
                     ctx.lineTo(x2, y2);
