@@ -26,9 +26,9 @@ body::-webkit-scrollbar-track{
 }
 
 main{
-    margin-left: 5%;
-    margin-right: 5%;
-    padding:3%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding:2rem; 
 }
 
 .navbar{
@@ -37,7 +37,6 @@ main{
     transition: width 300ms ease;
 }
 .navbar-nav{
-    
     list-style: none;
     padding: 0;
     margin: 0;
@@ -45,7 +44,6 @@ main{
     flex-direction: column;
     align-items: center;
     height: 100%;
-    width: 100%;
 }
 .nav-item
 {
@@ -71,23 +69,19 @@ main{
 .link-text
 {
     display: none;
-
 }
-.nav-link svg{
-    min-width: 2rem;
-}
-
 
 .gg-home, .gg-info, .gg-games, .gg-headset, .gg-image{
     color:var(--col-third);
+    margin-left: 1rem;
 }
 
 /* small screens */
 @media only screen and (max-width: 600px){
     .navbar{
         bottom: 0;
-        width: 100vw;
-        height: 4rem;
+        width: 100%;
+        height: 2rem;
     }
     .navbar-nav{
         flex-direction: row;
@@ -95,7 +89,9 @@ main{
     .nav-link{
         justify-content: center;
     }
-    
+    .gg-home, .gg-info, .gg-games, .gg-headset, .gg-image{
+        margin-left: 0%;
+    }
 }
 
 /* big screens */
