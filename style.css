@@ -154,7 +154,7 @@ body::-webkit-scrollbar-track{
     .navbar{
         bottom: 0;
         width: 100%;
-        height: 2rem;
+        height: 13%;
     }
     .navbar-nav{
         flex-direction: row;
