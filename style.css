@@ -165,6 +165,8 @@ body::-webkit-scrollbar-track{
     }
     .gg-home, .gg-info, .gg-games, .gg-headset, .gg-image{
         margin-left: 0%;
+        width: 90%;
+        height: 90%;
     }
     .mainScreen,.myArtwork,.myGames,.aboutMe,.myMusic
     {
