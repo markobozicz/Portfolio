@@ -26,6 +26,11 @@ body{
     padding-bottom: .5rem;
     background-color: rgba(32, 38, 72, 0.08);
 }
+
+
+
+
+
 .myGames{
     margin-left: 3rem;
     margin-right: 0rem;
@@ -33,6 +38,28 @@ body{
     padding-bottom: .5rem;
     background-color: rgba(212, 198, 118, 0.05);
 }
+
+.thumbnails {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: stretch;
+    -webkit-align-items: stretch;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+
 .myMusic{
     margin-left: 3rem;
     margin-right: 0rem;
@@ -53,7 +80,7 @@ a {
 
 .bg {
     animation:slide 6s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #101742 50%, #182263 50%);
+    background-image: linear-gradient(-60deg, #203088 50%, #152370 50%);
     bottom:0;
     left:-50%;
     opacity:.2;
@@ -224,11 +251,11 @@ body::-webkit-scrollbar-track{
 */
 .card{
     display: grid;
-    grid-template-columns: 17rem;
-    grid-template-rows: 10rem 10rem 3rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem 10rem 5rem;
     grid-template-areas: "image" "text" "stats";
     font-family: 'Lato', sans-serif;
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     background:var(--col-secondary);
     box-shadow: 0.5rem 0.7rem 2rem rgba(0, 0, 0, 0.363);
     text-align: center;
@@ -236,6 +263,7 @@ body::-webkit-scrollbar-track{
     margin: 1rem;
     transform: scale(0.8);
     float:left; 
+
 }
 .card:hover{
     transform: scale(1);
@@ -246,8 +274,8 @@ body::-webkit-scrollbar-track{
 .card-image{
     grid-area: image;
     background: url(Images/testimage.PNG);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
     background-size: 100% 100%;
 }
 .card-text{
