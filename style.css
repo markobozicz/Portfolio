@@ -200,6 +200,10 @@ body::-webkit-scrollbar-track{
         margin-right: 1rem;
         margin-left: 1rem;
     }
+    .card
+    {
+        transform: scale(1);
+    }
 }
 
 /*------------------------------------------------------------------------------
