@@ -1,0 +1,325 @@
+:root{
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    --col-primary: #203088;
+    --col-secondary: #202648;
+    --col-third: #D4C676;
+    --col-fourth: #ffffff;
+}
+body{
+    color: var(--col-fourth);
+    background-color:var(--col-primary);
+    margin: 0;
+    padding: 0;
+}
+.mainScreen{
+    margin-left: 3rem;
+    margin-right: 0rem;
+    padding: 2rem; 
+    padding-bottom: .5rem;
+    background-color: rgba(67, 87, 204, 0.1);
+}
+.aboutMe{
+    margin-left: 3rem;
+    margin-right: 0rem;
+    padding: 2rem; 
+    padding-bottom: .5rem;
+    background-color: rgba(32, 38, 72, 0.08);
+}
+
+
+
+
+
+.myGames{
+    margin-left: 3rem;
+    margin-right: 0rem;
+    padding: 2rem; 
+    padding-bottom: .5rem;
+    background-color: rgba(212, 198, 118, 0.05);
+}
+
+.thumbnails {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: stretch;
+    -webkit-align-items: stretch;
+    -ms-align-items: stretch;
+    align-items: stretch;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+
+.myMusic{
+    margin-left: 3rem;
+    margin-right: 0rem;
+    padding: 2rem; 
+    padding-bottom: .5rem;
+    background-color: rgba(32, 38, 72, 0.08);
+}
+.myArtwork{
+    margin-left: 3rem;
+    margin-right: 0rem;
+    padding: 2rem; 
+    padding-bottom: .5rem;
+    background-color: rgba(67, 87, 204, 0.1);
+}
+a {
+    color: var(--col-third);
+  }
+
+.bg {
+    animation:slide 6s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #203088 50%, #152370 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.2;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:7s;
+}
+
+.bg3 {
+    animation-duration:8s;
+}
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+    100% {
+        transform:translateX(25%);
+    }
+}
+
+/*------------------------------------------------------------------------------
+*/
+/* scrollbar */
+/*
+*/
+body::-webkit-scrollbar{
+    width: 0.1rem;
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--col-secondary);
+}
+body::-webkit-scrollbar-track{
+    background: var(--col-primary);
+}
+
+/*------------------------------------------------------------------------------
+*/
+/* navbar */
+/*
+*/
+.navbar{
+    position: fixed;
+    background-color: var(--col-secondary) ;
+    transition: width 300ms ease;
+}
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.nav-item
+{
+    width: 100%;
+}
+.nav-item:last-child{
+    margin-top: none;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    color: var(--col-fourth);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.75);
+    transition: 300ms ease;
+}
+.nav-link:hover
+{
+    filter: grayscale(0%) opacity(1) brightness(200%);
+    background: var(--col-primary);
+}
+.link-text
+{
+    display: none;
+}
+
+.gg-home, .gg-info, .gg-games, .gg-headset, .gg-image{
+    color:var(--col-fourth);
+    margin-left: 1rem;
+}
+
+/*------------------------------------------------------------------------------
+*/
+/* small screens */
+/*
+*/
+@media only screen and (max-width: 1000px){
+    .navbar{
+        bottom: 0;
+        width: 100%;
+        height: 13%;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+    .nav-link{
+        justify-content: center;
+        height: 100%;
+    }
+    .gg-home, .gg-info, .gg-games, .gg-headset, .gg-image{
+        margin-left: 0%;
+        width: 90%;
+        height: 90%;
+    }
+    .mainScreen,.myArtwork,.myGames,.aboutMe,.myMusic
+    {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .card
+    {
+        transform: scale(1);
+    }
+}
+
+/*------------------------------------------------------------------------------
+*/
+/* big screens */
+/*
+*/
+@media only screen and (min-width: 1000px){
+    .navbar{
+        top: 0;
+        width: 3rem; 
+        height: 100vh;
+    }
+    .navbar:hover{
+        width: 8rem;
+    }
+    .navbar:hover .link-text{
+        display: inline;
+        padding-left: .5rem;
+    }
+    .nav-item:first-child{
+        margin-top: 3rem;
+    }
+}
+
+
+.webgl-content * {border: 0; margin: 0; padding: 0}
+.webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+
+.webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.webgl-content .logo {background: url('Games/PixelRace/TemplateData/progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
+.webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
+.webgl-content .progress .empty {background: url('Games/PixelRace/TemplateData/progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.webgl-content .progress .full {background: url('Games/PixelRace/TemplateData/progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+
+.webgl-content .logo.Dark {background-image: url('Games/PixelRace/TemplateData/progressLogo.Dark.png');}
+.webgl-content .progress.Dark .empty {background-image: url('Games/PixelRace/TemplateData/progressEmpty.Dark.png');}
+.webgl-content .progress.Dark .full {background-image: url('Games/PixelRace/TemplateData/progressFull.Dark.png');}
+
+.webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
+.webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
+.webgl-content .footer .webgl-logo {background-image: url('Games/PixelRace/TemplateData/webgl-logo.png'); width: 204px; float: left;}
+.webgl-content .footer .title {margin-right: 10px; float: right;}
+.webgl-content .footer .fullscreen {background-image: url('Games/PixelRace/TemplateData/fullscreen.png'); width: 38px; float: right;}
+/*------------------------------------------------------------------------------
+*/
+/* game cards */
+/*
+*/
+.card{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem 10rem 5rem;
+    grid-template-areas: "image" "text" "stats";
+    font-family: 'Lato', sans-serif;
+    border-radius: 0.2rem;
+    background:var(--col-secondary);
+    box-shadow: 0.5rem 0.7rem 2rem rgba(0, 0, 0, 0.363);
+    text-align: center;
+    width: 17rem;
+    margin: 1rem;
+    transform: scale(0.8);
+    float:left; 
+
+}
+.card:hover{
+    transform: scale(1);
+    transition: 300ms ease;
+    /* cursor: pointer; */
+}
+
+.card-image{
+    grid-area: image;
+    background: url(Images/testimage.PNG);
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    background-size: 100% 100%;
+}
+.card-text{
+    grid-area: text;
+    margin: 25px;
+}
+.card-text .date{
+    color: var(--col-fourth);
+    font-size: 13px;
+}
+.card-text p{
+    color: var(--col-fourth);
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text h2{
+    margin-top: 0px;
+    font-size: 28px;
+}
+.card-stats{
+    grid-area: stats;
+}
+
+.myButton {
+	box-shadow: 0px 10px 10px -7px #2768738f;
+	background-color:var(--col-primary);
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+    background-color: var(--col-fourth);
+}
+.myButton:active {
+	position: relative;
+	top:1px;
+}
